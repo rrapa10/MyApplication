@@ -1,6 +1,7 @@
 package com.rya.rye.myapplication.my_interface;
 
 import com.rya.rye.myapplication.model.Cancha;
+import com.rya.rye.myapplication.model.Usuario;
 
 import java.util.List;
 
@@ -15,5 +16,11 @@ public interface GetCanchaDataService {
     @GET("api/canchaById/")
     Call<List<Cancha>> getCanchaByIdData(
             @Query("id") String id
+    );
+
+    @GET("Login/login/")
+    Call<List<Usuario>> getUsuarioData(
+            @Query("dni") String dni,
+            @Query("pass") String pass
     );
 }
